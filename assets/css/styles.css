@@ -1,0 +1,554 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: simplifica;
+}
+
+@font-face {
+    font-family: simplifica;
+    src: url(simplifica.ttf);
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-page, .second-page, .third-page, .fourth-page, .fifth-page {
+  width: inline-block;
+  height: 100vh;
+}
+
+/* ======================
+FIRST PAGE
+====================== */
+.first-page {
+  /* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/map.jpg"); */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 100;
+}
+
+.welcome-name {
+  font-size: 2em;
+  padding-top: 15%;
+  z-index: 9999;
+  color: black;
+  letter-spacing: 4px;
+  word-spacing: 5px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.welcome-name h3{
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.nav-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: #2b2c2d;
+  z-index: 1000;
+
+}
+
+.nav-container.scrolled {
+  position: fixed;
+  z-index: 1000;
+  height: 35px;
+  top:0;
+  animation-duration: 2s;
+
+}
+
+.navigations {
+  margin-top: 10px;
+  width: 100%;
+
+}
+
+.navigations a{
+  margin: 0 25px;
+  color: white;
+  text-decoration: none;
+}
+
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #FFFFFF;
+    user-select: none;
+    z-index: 50;
+}
+.snowflake:hover {
+    cursor: default;
+}
+
+/* ======================
+SECOND PAGE
+====================== */
+
+.second-page {
+  z-index: 59;
+  background: black;
+  color: white;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  /* position: fixed; */
+}
+
+.info {
+    width: 700px;
+    display: flex;
+    align-items: center;
+}
+
+#info-text {
+    margin-left: 10px;
+    /* font-family: 'Luckiest Guy', cursive; */
+    letter-spacing: 1px;
+}
+
+.profile-pic {
+    width: 450px;
+}
+
+
+.profile-image {
+    position: relative;
+    width: 450px;
+    height: 697;
+}
+
+.blank {
+    flex-grow: 1;
+}
+
+/* ======================
+THIRD PAGE
+====================== */
+.third-page {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+ }
+
+.third-b {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.third-bee img {
+    width: 300px;
+    height: auto;
+}
+
+.third-bee {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+IMG {
+	width: 100%;
+	display: block;
+}
+.item IMG {
+	visibility: hidden;
+}
+
+.container {
+	margin: 5rem auto;
+	padding: 1rem 0 2.4rem;
+	text-align: center;
+}
+.container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.item {
+	width: 10rem;
+	height: 10rem;
+	position: relative;
+	display: inline-block;
+	margin: 0.5rem;
+}
+.item::before { /* Goldenrod outline on the hexagon */
+	content: "";
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	background-color: #EFC050;
+	clip-path: polygon(50% 0, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+	transform: scale(1.077);
+	transition: transform 0.3s;
+}
+.item:hover::before {
+	transform: scale(1.154);
+}
+.item A {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+/* 	background-image: See JS. */
+	background-size: cover;
+	background-position: center;
+	clip-path: polygon(50% 0, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+}
+
+/* ======================
+FOURTH PAGE
+====================== */
+
+
+.fourth-page {
+  height: auto;
+  font-size: 2em;
+}
+
+.skills-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.skills {
+    margin: 3% 0;
+    width: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills h2 {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.skills a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 33%;
+  max-height: 200px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: fixed;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+    border: 1px solid pink;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ======================
+FIFTH PAGE
+====================== */
+
+
+.fifth-page {
+  background-color: black;
+  color: #e68a00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+
+.fifth-page h1, .fifth-page h3 {
+     font-weight: 100;
+     color: #e68a00;
+}
+
+hr {
+    border-top: 1px solid #ff9900;
+    width: 100px;
+}
+
+.icons {
+    font-size: 5em;
+    color: #ff9900;
+    margin: 50px 20px;
+}
+
+.icons:hover {
+    color: #995c00;
+}
+#icons {
+    display: inline-block;
+}
+
+.navigations a.icon {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 17rem) {
+	.item {
+		display: block;
+		float: left;
+		margin: 0; /* reset */
+		margin-bottom: -1.4rem;	/* shifting up the items in the next row */
+	}
+    .third-page {
+        height: auto;
+    }
+    .skills {
+        width: auto;
+    }
+}
+
+@media (min-width: 17rem) and (max-width: 21.999rem) {
+	.container {
+		max-width: 15rem;
+	}
+	.item:nth-child(even) {
+		margin-left: 5rem;
+	}
+    .third-page {
+        height: auto;
+    }
+    .skills {
+        width: auto;
+    }
+}
+
+@media (min-width: 22rem) and (max-width: 31.999rem) {
+	.container {
+		max-width: 20rem;
+	}
+	.item:nth-child(3n+3) {
+		margin-left: 5rem
+	}
+    .third-page {
+        height: auto;
+    }
+}
+
+@media (min-width: 32rem) and (max-width: 41.999rem) {
+	.container {
+		max-width: 30rem;
+	}
+	.item:nth-child(5n+4) {
+		margin-left: 5rem;
+	}
+    .third-page {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 200px) {
+    .navigations {
+        text-align: left;
+    }
+
+    .navigations a:not(:first-child) {
+        display: none;
+    }
+    .navigations a.icon {
+        float: right;
+        display: block;
+    }
+    .navigations.responsive {position: relative;}
+    .navigations.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navigations.responsive a {
+        display: block;
+        text-align: left;
+    }
+
+}
+@media only screen and (max-width: 1500px) and (min-width: 200px) {
+    .third-bee {
+        display: none;
+    }
+}
+
+@media (min-width: 42rem) and (max-width: 53.999rem) {
+	.container {
+		max-width: 40rem;
+	}
+	.item:nth-child(7n+5) {
+		margin-left: 5rem;
+	}
+    .third-page {
+        height: auto;
+    }
+
+}
+
+
+@media (min-width: 54rem) {
+	.container {
+		max-width: 50rem;
+	}
+	.item:nth-child(9n+6) {
+		margin-left: 5rem;
+	}
+    .third-page {
+        height: 800px;
+    }
+
+}
+/* IE resets - because of clip-path no support */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS */
+	.container {
+		padding: 1.25rem 0;
+	}
+	.item {
+		display: inline-block;
+		float: none;
+		margin: .85rem !important;
+	}
+}
+@supports (-ms-ime-align: auto) {
+	/* IE Edge 12+ */
+	.container {
+		padding: 1.25rem 0;
+	}
+	.item {
+		display: inline-block;
+		float: none;
+		margin: .85rem !important;
+	}
+    }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <div class="page-container">
+
+      <div class="first-page">
+        <div id="snowflakeContainer">
+          <p class="snowflake"></p>
+        </div>
+        <div class="welcome-name">
+          <h1>Marco Paulo Castro</h1>
+          <h3 id="roles"></h3>
+        </div>
+        <div class="nav-container">
+          <div class="navigations" id="navigations">
+            <a href="#" id="home">Home</a>
+            <a href="#" id="about">About Me</a>
+            <a href="#" id="skills">Skills</a>
+            <a href="#" id="projects">Projects</a>
+            <a href="#" id="contact">Contact Me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<i class="fa fa-bars"></i>
+</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="second-page">
+
+          <div class="info">
+              <div id="info-text">
+                  WELCOME TO MY PORTFOLIO WEBSITE<br><br>
+                  My name is Marco Paulo Castro, I am a Full-Stack Developer.<br>
+                  I hold a degree in Nursing in my home country Philippines <br>
+                  and currently residing in Finland where I do my Information <br>
+                  Technology Engineering studies. I love building and<br>
+                  designing web applications. It has been my passion for <br>
+                  more than two years now. I love to challenge myself to be better<br>
+                  everyday in what I do and to learn new things all the time.
+              </div>
+
+          </div>
+          <div class="profile-pic">
+                  <img class="profile-image" src="./assets/images/profile.jpg" alt="">
+          </div>
+
+      </div>
+
+      <div class="third-page">
+          <div class="third-bee">
+              <img src="./assets/images/bee1.png" alt="">
+          </div>
+
+          <div class="third-b">
+            <h1>My Skillset Includes</h1>
+            <ul class="container">
+                <li class="item"><a href="#0"><img src="./assets/images/HTML.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/CSS.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/js.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/jquery.jpg" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/mongo.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/postgres.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/socket.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/react.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/redux.jpg" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/vue.jpg" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/s3.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/firebase.svg" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/git.png" alt="02"></a></li>
+                <li class="item"><a href="#0"><img src="./assets/images/jasmine.png" alt="02"></a></li>
+            </ul>
+            <h1 id="show-skill"></h1>
+          </div>
+          <div class="third-bee">
+              <img src="./assets/images/bee2.png" alt="">
+          </div>
+
+      </div>
+
+      <div class="fourth-page">
+
+            <div class="skills-row">
+                <div class="skills">
+                    <h2 onclick="openModal1();currentSlide(1)">Connect 4 Demo</h2>
+                    <a href="https://github.com/Marco-Ca/Connect-4" target="_blank">Link to code</a>
+                    <h3>Stacks used</h3>
+                    <h5>HTML, CSS, Javascript, jQuery</h5>
+
+                </div>
+                <div class="skills">
+                    <h2 onclick="openModal2();currentSlide(1)">Imageboard Demo</h2>
+                    <a href="https://github.com/Marco-Ca/Imageboard" target="_blank">Link to code</a>
+                    <h3>Stacks used</h3>
+                    <h5>Javascript, Node, Express, PostgreSQL, VueJS, AWS S3, Annyang</h5>
+                </div>
+                <div class="skills">
+                    <h2 onclick="openModal3();currentSlide(1)">Petition Demo</h2>
+                    <a href="https://github.com/Marco-Ca/Petition" target="_blank">Link to code</a>
+                    <h3>Stacks used</h3>
+                    <h5>Javascript, Node, Express, Express Handlebars (Mustache)</h5>
+                </div>
+                <div class="skills">
+                    <h2 onclick="openModal4();currentSlide(1)">Social Network Demo</h2>
+                    <a href="https://github.com/Marco-Ca/Social-Network" target="_blank">Link to code</a>
+                    <h3>Stacks used</h3>
+                    <h5>Javascript, Node, Express, React, Redux, AWS S3, PostgreSQL, SocketIO</h5>
+                </div>
+                <div class="skills">
+                    <h2 onclick="openModal5();currentSlide(1)">React Native Demo</h2>
+                    <a href="https://github.com/Marco-Ca/ImPrint" target="_blank">Link to code</a>
+                    <h3>Stacks used</h3>
+                    <h5>React Native, Redux, Firebase, Android Studio</h5>
+                </div>
+
+                <!-- <img src="./assets/images/connect4/connect4a.gif" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <img src="./assets/images/connect4/connect4a.gif" onclick="openModal();currentSlide(1)" class="hover-shadow"> -->
+
+            </div>
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
+
+                <div class="mySlides">
+                  <div class="numbertext">1 / 3</div>
+                  <img id="image-1" src="" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">2 / 3</div>
+                  <img id="image-2" src="" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">3 / 3</div>
+                  <img id="image-3" src="" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="column">
+                  <img class="demo-1 demo" src="./assets/images/connect4/connect4a.gif" onclick="currentSlide(1)" alt="">
+                </div>
+
+                <div class="column">
+                  <img class="demo-2 demo" src="./assets/images/connect4/connect4b.gif" onclick="currentSlide(2)" alt="">
+                </div>
+
+                <div class="column">
+                  <img class="demo-3 demo" src="./assets/images/connect4/connect4c.gif" onclick="currentSlide(3)" alt="">
+                </div>
+              </div>
+            </div>
+
+      </div>
+
+      <div class="fifth-page">
+          <h1>CONTACT ME</h1><br>
+          <h3><em>Do you need a Full-Stack Developer?</em></h3><br>
+          <hr><br>
+          <h1>MARCO PAULO <strong>CASTRO</strong></h1>
+          <br>
+          <h3>marcoca@metropolia.fi</h3>
+          <div id="icons">
+              <a href="https://github.com/Marco-Ca" target="_blank"><i class="fab fa-github icons"></i></a>
+              <a href="https://www.linkedin.com/in/marco-paulo-castro/" target="_blank"><i class="fab fa-linkedin-in icons"></i></a>
+
+
+          </div>
+
+      </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script type="text/javascript" src="./assets/scripts/snowflakes.js"></script>
+    <script type="text/javascript" src="./assets/scripts/index.js"></script>
+    <!-- <script type="text/javascript" src="./assets/scripts/snowflakes2.js"></script> -->
+
+  </body>
+</html>
