@@ -63,18 +63,17 @@ function check_if_in_view() {
                 MozAnimation: 'mozAnimationEnd',
                 WebkitAnimation: 'webkitAnimationEnd',
             };
-
-          for (var t in animations) {
-            if (el.style[t] !== undefined) {
-              return animations[t];
+            for (var t in animations) {
+                if (el.style[t] !== undefined) {
+                    return animations[t];
+                }
             }
-          }
         });
 
         //check to see if this current container is within viewport
         if ((element_bottom_position >= window_top_position) &&
         (element_top_position <= window_bottom_position)) {
-            $element.addClass('animated slideInLeft once delay-2s').one(animationEnd,
+            $element.addClass('animated slideInLeft delay-2s').one(animationEnd,
                 function() {
                     $element.removeClass('animated slideInLeft delay-2s');
                 }

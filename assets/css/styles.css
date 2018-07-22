@@ -377,6 +377,7 @@ FIFTH PAGE
 .fifth-page h1, .fifth-page h3 {
      font-weight: 100;
      color: #e68a00;
+     margin: 10px;
 }
 
 hr {
