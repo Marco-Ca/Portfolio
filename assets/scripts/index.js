@@ -1,4 +1,4 @@
-var roles = ['Front-End Developer', 'Back-End Developer', 'Passionate Coder'];
+var roles = ['Front-End Developer', 'Back-End Developer', 'Full-Stack Developer'];
 
 setInterval(myTimer, 2000);
 
@@ -39,6 +39,72 @@ for (var i = 0; i < list.length; i++) {
 $(window).on('mouseover', ()=> {
     $('#show-skill').html('');
 });
+
+
+var $animation_elements = $('#info-text');
+var $animation_elements2 = $('#icons');
+var $window = $(window);
+
+function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+
+    $.each($animation_elements, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+
+        var animationEnd = (function(el) {
+            var animations = {
+                animation: 'animationend',
+                OAnimation: 'oAnimationEnd',
+                MozAnimation: 'mozAnimationEnd',
+                WebkitAnimation: 'webkitAnimationEnd',
+            };
+
+          for (var t in animations) {
+            if (el.style[t] !== undefined) {
+              return animations[t];
+            }
+          }
+        });
+
+        //check to see if this current container is within viewport
+        if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+            $element.addClass('animated slideInLeft once delay-2s').one(animationEnd,
+                function() {
+                    $element.removeClass('animated slideInLeft delay-2s');
+                }
+            );
+        } else {
+            $element.removeClass('animated slideInLeft delay-2s');
+        }
+    });
+    $.each($animation_elements2, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+
+        //check to see if this current container is within viewport
+        if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+            $element.addClass('animated zoomInUp delay-2s');
+        } else {
+            $element.removeClass('animated zoomInUp delay-2s');
+        }
+    });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+
+
+
 
 $("#home").on('click', (event) => {
     event.preventDefault();
@@ -180,7 +246,7 @@ function openModal5() {
     $('body').css('overflow', 'hidden');
 }
 
-// Close the Modal
+
 function closeModal() {
     document.getElementById('myModal').style.display = "none";
     $('body').css('overflow', 'auto');
@@ -189,12 +255,10 @@ function closeModal() {
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
@@ -228,8 +292,6 @@ function myFunction() {
         $('.nav-container').css('height', '35px');
     }
 }
-
-
 
 $('.item:eq(0)').on('mouseover', function(e) {
     e.stopPropagation();
@@ -322,17 +384,44 @@ function snowflake() {
     $('.snowflake:eq(17)').css("color", randomColor()).html("Funky Chicken");
     $('.snowflake:eq(18)').css("color", randomColor()).html("Component");
     $('.snowflake:eq(19)').css("color", randomColor()).html("map()");
-    $('.snowflake:eq(20)').css("color", randomColor()).html("filter()");
+    $('.snowflake:eq(20)').css("color", randomColor()).html("Hello World");
+    $('.snowflake:eq(21)').css("color", randomColor()).html("hire: yes ? yes");
+    $('.snowflake:eq(22)').css("color", randomColor()).html("AJAX");
+    $('.snowflake:eq(23)').css("color", randomColor()).html("state");
+    $('.snowflake:eq(24)').css("color", randomColor()).html("componentDidMount");
+    $('.snowflake:eq(25)').css("color", randomColor()).html("expression1 && expression2");
+    $('.snowflake:eq(26)').css("color", randomColor()).html("closure");
+    $('.snowflake:eq(27)').css("color", randomColor()).html("promises");
+    $('.snowflake:eq(28)').css("color", randomColor()).html("resolve");
+    $('.snowflake:eq(29)').css("color", randomColor()).html("reject");
+    $('.snowflake:eq(30)').css("color", randomColor()).html("pending");
+    $('.snowflake:eq(31)').css("color", randomColor()).html("Vanilla");
+    $('.snowflake:eq(32)').css("color", randomColor()).html("Primitive");
+    $('.snowflake:eq(33)').css("color", randomColor()).html("constructors");
+    $('.snowflake:eq(34)').css("color", randomColor()).html("mutable");
+    $('.snowflake:eq(35)').css("color", randomColor()).html("concatenation");
+    $('.snowflake:eq(36)').css("color", randomColor()).html("interpolation");
+    $('.snowflake:eq(37)').css("color", randomColor()).html("animate");
+    $('.snowflake:eq(38)').css("color", randomColor()).html("NaN");
+    $('.snowflake:eq(39)').css("color", randomColor()).html("High-Level Function");
+    $('.snowflake:eq(40)').css("color", randomColor()).html("Invocation");
+    $('.snowflake:eq(41)').css("color", randomColor()).html("Function");
+    $('.snowflake:eq(42)').css("color", randomColor()).html("() = >");
+    $('.snowflake:eq(43)').css("color", randomColor()).html("return null;");
+    $('.snowflake:eq(44)').css("color", randomColor()).html("Method");
+    $('.snowflake:eq(45)').css("color", randomColor()).html("Expression");
+    $('.snowflake:eq(46)').css("color", randomColor()).html("Argument");
+    $('.snowflake:eq(47)').css("color", randomColor()).html("parameters");
+    $('.snowflake:eq(48)').css("color", randomColor()).html("req.body");
+    $('.snowflake:eq(49)').css("color", randomColor()).html("res.sessions");
+    $('.snowflake:eq(50)').css("color", randomColor()).html("filter()");
 
 }
 
 $(document).ready(function() {
     $(this).scrollTop(0);
     snowflake();
-    // myFunction();
-
 });
-
 
 function randomColor() {
     var r = Math.floor(Math.random() * 256);

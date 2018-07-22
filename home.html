@@ -5,10 +5,11 @@
     <title>My Portfolio Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Orbitron" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Orbitron|Inconsolata|Raleway:100,400" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
   </head>
 
   <body>
@@ -20,7 +21,7 @@
           <p class="snowflake"></p>
         </div>
         <div class="welcome-name">
-          <h1>Marco Paulo Castro</h1>
+          <h1 class="animated lightSpeedIn delay-2s">Marco Paulo Castro</h1>
           <h3 id="roles"></h3>
         </div>
         <div class="nav-container">
@@ -59,7 +60,7 @@
       </div>
 
       <div class="third-page">
-          <div class="third-bee">
+          <div class="third-bee animated pulse infinite delay-5s">
               <img src="./assets/images/bee1.png" alt="">
           </div>
 
@@ -81,9 +82,9 @@
                 <li class="item"><a href="#0"><img src="./assets/images/git.png" alt="02"></a></li>
                 <li class="item"><a href="#0"><img src="./assets/images/jasmine.png" alt="02"></a></li>
             </ul>
-            <h1 id="show-skill"></h1>
+            <h1 id="show-skill" class="animated jello infinite delay-5s"></h1>
           </div>
-          <div class="third-bee">
+          <div class="third-bee animated pulse infinite delay-5s">
               <img src="./assets/images/bee2.png" alt="">
           </div>
 
@@ -124,12 +125,8 @@
                     <h5>React Native, Redux, Firebase, Android Studio</h5>
                 </div>
 
-                <!-- <img src="./assets/images/connect4/connect4a.gif" onclick="openModal();currentSlide(1)" class="hover-shadow">
-                <img src="./assets/images/connect4/connect4a.gif" onclick="openModal();currentSlide(1)" class="hover-shadow"> -->
-
             </div>
 
-            <!-- The Modal/Lightbox -->
             <div id="myModal" class="modal">
               <span class="close cursor" onclick="closeModal()">&times;</span>
               <div class="modal-content">
@@ -149,16 +146,13 @@
                   <img id="image-3" src="" style="width:100%">
                 </div>
 
-                <!-- Next/previous controls -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-                <!-- Caption text -->
                 <div class="caption-container">
                   <p id="caption"></p>
                 </div>
 
-                <!-- Thumbnail image controls -->
                 <div class="column">
                   <img class="demo-1 demo" src="./assets/images/connect4/connect4a.gif" onclick="currentSlide(1)" alt="">
                 </div>
@@ -172,9 +166,7 @@
                 </div>
               </div>
             </div>
-
       </div>
-
       <div class="fifth-page">
           <h1>CONTACT ME</h1><br>
           <h3><em>Do you need a Full-Stack Developer?</em></h3><br>
@@ -185,16 +177,14 @@
           <div id="icons">
               <a href="https://github.com/Marco-Ca" target="_blank"><i class="fab fa-github icons"></i></a>
               <a href="https://www.linkedin.com/in/marco-paulo-castro/" target="_blank"><i class="fab fa-linkedin-in icons"></i></a>
-
-
           </div>
-
+          <p>&copy 2018 Marco Paulo Castro</p>
       </div>
+
     </div>
-    <script src="jquery.js"></script>
+    <script src="./assets/scripts/jquery.js"></script>
     <script type="text/javascript" src="./assets/scripts/snowflakes.js"></script>
     <script type="text/javascript" src="./assets/scripts/index.js"></script>
-    <!-- <script type="text/javascript" src="./assets/scripts/snowflakes2.js"></script> -->
 
   </body>
 </html>
